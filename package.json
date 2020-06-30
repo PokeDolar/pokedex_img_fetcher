@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.9.20",
+    "pngjs": "^5.0.0"
   }
 }
