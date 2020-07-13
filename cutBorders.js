@@ -1,13 +1,13 @@
 const fs = require("fs");
 const PNG = require("pngjs").PNG;
 const sharp = require('sharp');
-let files = fs.readdirSync("./arts");
+let files = fs.readdirSync("./pokedex");
 let counter = 0;
 console.log(files);
 
 (async () => {
   for (file of files) {
-    let png = fs.readFileSync(`./arts/${file}`)
+    let png = fs.readFileSync(`./pokedex/${file}`)
     let img = new PNG.sync.read(png);
     let maxY = 0;
     let minY = 999999999;
@@ -45,7 +45,7 @@ console.log(files);
     console.log(`minX ${minX}`);
     let width = maxX - minX;
     let height = maxY - minY;
-    let imgCrop = sharp(`./arts/${file}`);
+    let imgCrop = sharp(`./pokedex/${file}`);
     let params = {
       left: minX,
       top: minY,
